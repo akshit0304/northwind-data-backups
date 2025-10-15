@@ -6,232 +6,37 @@
 ### Category
 # @name Category_GET
 GET {{server}}/odata/v4/catalog/Category
-# Authorization: Basic {{username}}:{{password}}
+Authorization: Basic {{username}}:{{password}}
 
 
 ### Category
 # @name Category_POST
 POST {{server}}/odata/v4/catalog/Category
 Content-Type: application/json
-# Authorization: Basic {{username}}:{{password}}
+Authorization: Basic {{username}}:{{password}}
 
 {
-  "Name": "akshit",
-  "Description": "Description-13660223"
+  # "ID": "7486368a-a9cf-4d3c-b9a4-5152928f2bbe",
+  "CategoryName": "CategoryName-748636",
+  "Description": "Description-748636"
 }
 
 
 ### Category
 # @name Category_PATCH
-PATCH {{server}}/odata/v4/catalog/Category/9b0c80ad-eb50-457b-9895-ad99929abeca
+PATCH {{server}}/odata/v4/catalog/Category/7486368a-a9cf-4d3c-b9a4-5152928f2bbe
 Content-Type: application/json
 Authorization: Basic {{username}}:{{password}}
 
 {
-  "ID": "13660223-d3bc-4d91-bd00-b70535b0c60e",
-  "Name": "Name-13660223",
-  "Description": "Description-13660223",
-  "ProductID": [
-    {
-      "ID": "21274105-1db5-474a-b2dd-0a7f23139fa1",
-      "Name": "Name-21274105",
-      "SupplierID": {
-        "ID": "18092056-b09b-41a4-804e-d713f21b127c"
-      },
-      "QuantityPerUnit": "QuantityPerUnit-21274105",
-      "UnitPrice": 96,
-      "UnitsInStock": 13,
-      "UnitsOnOrder": 77,
-      "ReorderLevel": 92,
-      "Discontinued": false
-    },
-    {
-      "ID": "21274106-186a-40e0-a192-825828e37a2d",
-      "Name": "Name-21274106",
-      "SupplierID": {
-        "ID": "18092056-b09b-41a4-804e-d713f21b127c"
-      },
-      "QuantityPerUnit": "QuantityPerUnit-21274106",
-      "UnitPrice": 85,
-      "UnitsInStock": 77,
-      "UnitsOnOrder": 54,
-      "ReorderLevel": 92,
-      "Discontinued": true
-    }
-  ]
+  "ID": "7486368a-a9cf-4d3c-b9a4-5152928f2bbe",
+  "CategoryName": "CategoryName-748636",
+  "Description": "Description-748636"
 }
 
 
 ### Category
 # @name Category_DELETE
-DELETE {{server}}/odata/v4/catalog/Category/9b0c80ad-eb50-457b-9895-ad99929abeca
-Content-Type: application/json
-Authorization: Basic {{username}}:{{password}}
-
-
-### Product
-# @name Product_GET
-GET {{server}}/odata/v4/catalog/Product
-Authorization: Basic {{username}}:{{password}}
-
-
-### Product
-# @name Product_POST
-POST {{server}}/odata/v4/catalog/Product
-Content-Type: application/json
-Authorization: Basic {{username}}:{{password}}
-
-{
-  "ID": "21274105-1db5-474a-b2dd-0a7f23139fa1",
-  "Name": "Name-21274105",
-  "SupplierID": {
-    "ID": "18092056-b09b-41a4-804e-d713f21b127c"
-  },
-  "QuantityPerUnit": "QuantityPerUnit-21274105",
-  "UnitPrice": 96,
-  "UnitsInStock": 13,
-  "UnitsOnOrder": 77,
-  "ReorderLevel": 92,
-  "Discontinued": false
-}
-
-
-### Product
-# @name Product_PATCH
-PATCH {{server}}/odata/v4/catalog/Product/21274105-1db5-474a-b2dd-0a7f23139fa1
-Content-Type: application/json
-Authorization: Basic {{username}}:{{password}}
-
-{
-  "ID": "21274105-1db5-474a-b2dd-0a7f23139fa1",
-  "Name": "Name-21274105",
-  "SupplierID": {
-    "ID": "18092056-b09b-41a4-804e-d713f21b127c"
-  },
-  "QuantityPerUnit": "QuantityPerUnit-21274105",
-  "UnitPrice": 96,
-  "UnitsInStock": 13,
-  "UnitsOnOrder": 77,
-  "ReorderLevel": 92,
-  "Discontinued": false
-}
-
-
-### Product
-# @name Product_DELETE
-DELETE {{server}}/odata/v4/catalog/Product/21274105-1db5-474a-b2dd-0a7f23139fa1
-Content-Type: application/json
-Authorization: Basic {{username}}:{{password}}
-
-
-### Supplier
-# @name Supplier_GET
-GET {{server}}/odata/v4/catalog/Supplier
-Authorization: Basic {{username}}:{{password}}
-
-
-### Supplier
-# @name Supplier_POST
-POST {{server}}/odata/v4/catalog/Supplier
-Content-Type: application/json
-Authorization: Basic {{username}}:{{password}}
-
-{
-  "ID": "18092056-b09b-41a4-804e-d713f21b127c",
-  "CompanyName": "CompanyName-18092056",
-  "ContactName": "ContactName-18092056",
-  "ContactTitle": "ContactTitle-18092056",
-  "Address": "Address-18092056",
-  "City": "City-18092056",
-  "PostalCode": 80,
-  "Country": "Country-18092056",
-  "Region": "Region-18092056",
-  "Phone": "Phone-18092056",
-  "Fax": "Fax-18092056",
-  "HomePage": "HomePage-18092056",
-  "ProductID": [
-    {
-      "ID": "27313838-e888-40a6-b3b8-c47a6ad57d42",
-      "Name": "Name-27313838",
-      "CategoryID": {
-        "ID": "13660223-d3bc-4d91-bd00-b70535b0c60e"
-      },
-      "QuantityPerUnit": "QuantityPerUnit-27313838",
-      "UnitPrice": 55,
-      "UnitsInStock": 63,
-      "UnitsOnOrder": 10,
-      "ReorderLevel": 79,
-      "Discontinued": true
-    },
-    {
-      "ID": "27313839-8a25-4caa-8ffc-1034fa9e5e52",
-      "Name": "Name-27313839",
-      "CategoryID": {
-        "ID": "13660223-d3bc-4d91-bd00-b70535b0c60e"
-      },
-      "QuantityPerUnit": "QuantityPerUnit-27313839",
-      "UnitPrice": 34,
-      "UnitsInStock": 2,
-      "UnitsOnOrder": 51,
-      "ReorderLevel": 97,
-      "Discontinued": false
-    }
-  ]
-}
-
-
-### Supplier
-# @name Supplier_PATCH
-PATCH {{server}}/odata/v4/catalog/Supplier/18092056-b09b-41a4-804e-d713f21b127c
-Content-Type: application/json
-Authorization: Basic {{username}}:{{password}}
-
-{
-  "ID": "18092056-b09b-41a4-804e-d713f21b127c",
-  "CompanyName": "CompanyName-18092056",
-  "ContactName": "ContactName-18092056",
-  "ContactTitle": "ContactTitle-18092056",
-  "Address": "Address-18092056",
-  "City": "City-18092056",
-  "PostalCode": 80,
-  "Country": "Country-18092056",
-  "Region": "Region-18092056",
-  "Phone": "Phone-18092056",
-  "Fax": "Fax-18092056",
-  "HomePage": "HomePage-18092056",
-  "ProductID": [
-    {
-      "ID": "27313838-e888-40a6-b3b8-c47a6ad57d42",
-      "Name": "Name-27313838",
-      "CategoryID": {
-        "ID": "13660223-d3bc-4d91-bd00-b70535b0c60e"
-      },
-      "QuantityPerUnit": "QuantityPerUnit-27313838",
-      "UnitPrice": 55,
-      "UnitsInStock": 63,
-      "UnitsOnOrder": 10,
-      "ReorderLevel": 79,
-      "Discontinued": true
-    },
-    {
-      "ID": "27313839-8a25-4caa-8ffc-1034fa9e5e52",
-      "Name": "Name-27313839",
-      "CategoryID": {
-        "ID": "13660223-d3bc-4d91-bd00-b70535b0c60e"
-      },
-      "QuantityPerUnit": "QuantityPerUnit-27313839",
-      "UnitPrice": 34,
-      "UnitsInStock": 2,
-      "UnitsOnOrder": 51,
-      "ReorderLevel": 97,
-      "Discontinued": false
-    }
-  ]
-}
-
-
-### Supplier
-# @name Supplier_DELETE
-DELETE {{server}}/odata/v4/catalog/Supplier/18092056-b09b-41a4-804e-d713f21b127c
+DELETE {{server}}/odata/v4/catalog/Category/7486368a-a9cf-4d3c-b9a4-5152928f2bbe
 Content-Type: application/json
 Authorization: Basic {{username}}:{{password}}
