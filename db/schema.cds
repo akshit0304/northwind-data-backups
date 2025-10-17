@@ -4,13 +4,11 @@ namespace bd.businessSol;
 using { cuid ,managed } from '@sap/cds/common';
 
 entity Category:cuid {
-  // key CategoryID   : Integer;         // PK
       CategoryName : String(100);
       Description  : String;          // long text
 }
 
 entity Supplier :cuid{
-  // key SupplierID   : Integer;         // PK
       CompanyName  : String(100);
       ContactName  : String(100);
       ContactTitle : String(100);
@@ -24,7 +22,6 @@ entity Supplier :cuid{
 
 
 entity Product:cuid {
-  // key ProductID      : Integer;       // PK
       ProductName    : String(200);
       supplier           : String null;   // FK -> Suppliers.SupplierID
       category           : String null; // FK -> Categories.CategoryID
@@ -38,14 +35,12 @@ entity Product:cuid {
 
 
 entity Shipper :cuid{
-  // key ShipperID : Integer;
       CompanyName: String(100);
       Phone      : String(50);
 }
 
 
 entity Customer:cuid {
-  // key CustomerID : String(10);       // Northwind uses short string IDs (e.g. 'ALFKI')
       CompanyName: String(100);
       ContactName: String(100);
       ContactTitle: String(100);

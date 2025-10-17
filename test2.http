@@ -1,0 +1,57 @@
+@server=http://localhost:4004
+@username=alice
+@password=
+
+
+### Category
+# @name Category_GET
+# GET {{server}}/odata/v4/catalog/Category/try_fun?input1=200&input2=100
+# GET {{server}}/odata/v4/catalog/sum(x=1.2,y=2.3)
+GET {{server}}/odata/v4/catalog/count(tbl ='Order')
+Authorization: Basic {{username}}:{{password}}
+
+
+### Category
+# @name Category_POST
+POST {{server}}/odata/v4/catalog/Category
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "ID": "14219951-cc95-438c-badc-831294bf7008",
+  "CategoryName": "CategoryName-14219951",
+  "Description": "Description-14219951",
+  "createdAt": "2021-12-12T00:00:00.000Z",
+  "createdBy": "createdBy.8gs6n@example.org",
+  "modifiedAt": "2005-03-15T00:00:00.000Z",
+  "modifiedBy": "modifiedBy.8gs6n@example.net"
+}
+
+
+### Category
+# @name Category_PATCH
+PATCH {{server}}/odata/v4/catalog/Category/14219951-cc95-438c-badc-831294bf7008
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "ID": "14219951-cc95-438c-badc-831294bf7008",
+  "CategoryName": "CategoryName-14219951",
+  "Description": "Description-14219951",
+  "createdAt": "2021-12-12T00:00:00.000Z",
+  "createdBy": "createdBy.8gs6n@example.org",
+  "modifiedAt": "2005-03-15T00:00:00.000Z",
+  "modifiedBy": "modifiedBy.8gs6n@example.net"
+}
+
+
+### Category
+# @name Category_DELETE
+DELETE {{server}}/odata/v4/catalog/Category/14219951-cc95-438c-badc-831294bf7008
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+
+# @name Category_GET
+
+GET {{server}}/odata/v4/catalog/Category/try_fun(input1=200,input2=100)
