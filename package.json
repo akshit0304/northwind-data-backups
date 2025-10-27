@@ -18,9 +18,10 @@
   "cds": {
     "requires": {
       "db": {
+        "schema_evolution": false,
         "kind": "sqlite",
         "credentials": {
-          "url": "db.sqlite"
+          "url": "./DATABASE/BD.sqlite"
         }
       }
     }

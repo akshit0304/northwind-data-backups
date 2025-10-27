@@ -15,7 +15,7 @@ const logger =winston.createLogger({
                             elegant_new_format())
                         }),
 
-            new winston.transports.File({ filename: './error.log', level: 'error' }),
+            new winston.transports.File({ filename: './logger/error.log', level: 'error' }),
 
 
     ]
