@@ -1,0 +1,32 @@
+{
+  "name": "northwind",
+  "version": "1.0.0",
+  "description": "A simple CAP project.",
+  "dependencies": {
+    "@sap/cds": "^9",
+    "express": "^4",
+    "winston": "^3.18.3"
+  },
+  "devDependencies": {
+    "@cap-js/sqlite": "^2.0.3"
+  },
+  "scripts": {
+    "start": "cds-serve",
+    "w": "cds-watch"
+  },
+  "private": true,
+  "cds": {
+    "requires": {
+      "db": {
+        "schema_evolution": true,
+        "kind": "sqlite",
+        "credentials": {
+          "url": "./DATABASE/BD.sqlite"
+        }
+      }
+    }
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
