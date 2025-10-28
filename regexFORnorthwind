@@ -1,0 +1,33 @@
+# list of regex to remove the unnecessory data from northwind api response
+\s*"Products":(\n|\s|\{)*"results":(\n|\s|\[)*\{(.|\n|\s)*\}$
+
+\s*"Products":(\n|\s|\{)*"results":\s*\[(\n|\s|\w|\{|\})+\]
+
+\{\s*"Products":(\n|\s|\{)*"results":\s*\[(\n|\s)*(\{(\n|\s|[\w":,-.])+\},)+
+
+(\{(\n|\s|[\w":,-.])+\},(\s|\n)*)
+
+
+------------------
+"Supplier":(.*\s*\n*){13}\},
+
+
+(working regex : to remove nested data from northwind o-data service)
+"Order"\s?:[\s{}]+((\n|\s)*"\w+":\s?.+,?)+\n\s*\},
+
+
+---------------------
+for List type structure
+
+\{(\s*\n*"[\w]+":.+)+\s*\n*\},?
+
+--remove remained order -> result
+
+"Orders"\s?:(\s|\{|\n)*"results":\s*\[(\s|\n)*\]$\s*\n*\},\s*\n*$
+
+
+
+---------------------------------------------------------------------------------
+databases tables prefix format :
+bd_bModel_master_
+select ID  from bd_bModel_master_Categories order By createdAt;
